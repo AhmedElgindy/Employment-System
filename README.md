@@ -126,23 +126,7 @@ Your frontend should now be running at `http://localhost:5173`, and the backend 
 ### Employee
 
 - **GET /api/employees/**: List all employees.
-- **POST /api/employees/**: Create a new employee.
-  - **Request**: 
-    ```json
-    {
-      name: "",
-      email: "",
-      mobile_number: "",
-      address: "",
-      designation: "",
-      hired_on: "",
-      status: "Pending",
-      company: "",
-      department: "",
-      user: "",
-      id: "",
-    }
-    ```
+- **POST /api/employees/**: Create a new employee.    
 - **GET /api/employees/{id}/**: Retrieve a specific employee.
 - **PUT /api/employees/{id}/**: Update a specific employee.
 - **DELETE /api/employees/{id}/**: Delete a specific employee.
