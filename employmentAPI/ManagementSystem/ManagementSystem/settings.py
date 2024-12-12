@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     "rest_framework.authtoken",
     "django.contrib.sites",
     "dj_rest_auth",
+    "drf_yasg",
     "corsheaders",
     # Django Allauth for authentication
     "allauth",
@@ -138,6 +139,7 @@ REST_FRAMEWORK = {
         "rest_framework.permissions.IsAuthenticated",
     ],
     "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.SessionAuthentication",
         "rest_framework.authentication.TokenAuthentication",
     ],
 }

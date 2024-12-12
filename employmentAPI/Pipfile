@@ -10,6 +10,9 @@ django-cors-headers = "*"
 django-rest-auth = "*"
 dj-rest-auth = "*"
 requests = "*"
+django-allauth = "*"
+drf-yasg = "*"
+coreapi = "*"
 
 [dev-packages]
 
