@@ -1,0 +1,15 @@
+# Ignore Python bytecode files
+*.pyc
+__pycache__/
+
+# Ignore Django migrations
+/employemnt-api/*/migrations/
+
+# Ignore node modules
+/remployment-app/node_modules/
+
+# Ignore environment files
+.env
+
+# Ignore build files for React app
+/remployment-app/build/
