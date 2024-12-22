@@ -1,27 +1,15 @@
 # urls.py (company app)
-from django.urls import path
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
 from .views import (
-    CompanyListCreateView,
-    CompanyRetrieveUpdateDestroyView,
-    DepartmentListCreateView,
-    DepartmentRetrieveUpdateDestroyView,
+    CompanyViewSet,
+    DepartmentViewSet,
 )
 
+router = DefaultRouter()
+router.register(r"companies", CompanyViewSet, basename="company")
+router.register(r"departments", DepartmentViewSet, basename="department")
+
 urlpatterns = [
-    path("companies/", CompanyListCreateView.as_view(), name="company-list-create"),
-    path(
-        "companies/<int:pk>/",
-        CompanyRetrieveUpdateDestroyView.as_view(),
-        name="company-detail",
-    ),
-    path(
-        "departments/",
-        DepartmentListCreateView.as_view(),
-        name="department-list-create",
-    ),
-    path(
-        "departments/<int:pk>/",
-        DepartmentRetrieveUpdateDestroyView.as_view(),
-        name="department-detail",
-    ),
+    path("", include(router.urls)),
 ]

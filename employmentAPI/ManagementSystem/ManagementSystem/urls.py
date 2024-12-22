@@ -19,6 +19,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("accounts.urls")),
     path("employee/", include("employee.urls")),
+    path("", include("company.urls")),
     # Swagger UI documentation route
     path(
         "swagger-docs/",
